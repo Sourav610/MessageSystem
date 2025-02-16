@@ -1,0 +1,1 @@
+create table event_details(id int, event_date Date, person_name varchar(256), event_type varchar(128), mobile_number varchar(10));
