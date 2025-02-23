@@ -30,6 +30,7 @@ public class SetAlertServiceImpl implements SetAlertService {
         eventDataEntity.setPersonName(personName);
         eventDataEntity.setMobileNumber(mobileNo);
 
+
         try {
             eventDetailsDao.save(eventDataEntity);
         }catch(Exception e){

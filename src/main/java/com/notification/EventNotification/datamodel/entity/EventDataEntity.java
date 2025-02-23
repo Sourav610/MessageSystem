@@ -15,5 +15,6 @@ public class EventDataEntity {
     private Date eventDate;
     private String personName;
     private String mobileNumber;
+    private String eventType;
 
 }

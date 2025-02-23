@@ -2,8 +2,7 @@ package com.notification.EventNotification.service.impl;
 
 import com.notification.EventNotification.datamodel.dao.EventDetailsDao;
 import com.notification.EventNotification.datamodel.entity.EventDataEntity;
-import com.notification.EventNotification.service.SendNotification;
-import jdk.jfr.Event;
+import com.notification.EventNotification.service.SendAlert;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +12,7 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class SendNotificationImpl implements SendNotification {
+public class SendAlertImpl implements SendAlert {
 
     @Autowired
     private EventDetailsDao eventDetailsDao;
@@ -24,6 +23,8 @@ public class SendNotificationImpl implements SendNotification {
         for(int i = 0; i<newEvent.size(); i++){
             EventDataEntity eventDetail = newEvent.get(i);
             Date notificationTime = eventDetail.getEventDate();
+            String Type = eventDetail.getEventType();
+
             if(notificationTime.equals(new Date())){
                 log.info("Send notification");
             }
