@@ -4,9 +4,11 @@ import com.notification.EventNotification.datamodel.dao.NotificationDAO;
 import com.notification.EventNotification.datamodel.entity.NotificationEntity;
 import com.notification.EventNotification.datamodel.repository.NotificationRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class NotificationDAOImpl implements NotificationDAO {
 
     @Autowired

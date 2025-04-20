@@ -1,8 +1,6 @@
 package com.notification.EventNotification.datamodel.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -11,10 +9,14 @@ import java.util.Date;
 @Entity
 @Table(name="notifications")
 public class NotificationEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private Date  createdOn;
     private String created_by;
     private Date updatedOn;
+    private String notificationType;
     private int alertLimit;
     private int eventDetailsId;
+
 }

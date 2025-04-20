@@ -17,4 +17,5 @@ public class EventDataEntity {
     private String mobileNumber;
     private String eventType;
 
+
 }
